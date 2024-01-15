@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f8178aea98.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Clock App</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav">
+          <div class="nav-logo">
+            <a href="index.html"><h1>Clock App</h1></a>
+          </div>
+          <div class="nav-list-mid">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">World Clock</a></li>
+              <li><a href="#">Alarm Clock</a></li>
+              <li><a href="#">Pomodoro Technique Timer</a></li>
+              <li><a href="#">StopWatch</a></li>
+            </ul>
+          </div>
+          <div class="MenuBarOpen">
+            <i class="fa-solid fa-bars" id="OpenBtn"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="MobileNav-list" id="Mobilebar">
+        <ul>
+          <li>
+            <a href=""><i class="fa-solid fa-xmark"></i></a>
+          </li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">World Clock</a></li>
+          <li><a href="#">Alarm Clock</a></li>
+          <li><a href="#">Pomodoro Technique Timer</a></li>
+          <li><a href="#">StopWatch</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="section1">
+        <div class="innerSection">
+          <div class="Displaytime">
+            <div class="displayHours">
+              <span id="HoursTime">12</span>
+              <p>:</p>
+            </div>
+            <div class="displayminutes">
+              <span id="MinutesTime">00</span>
+              <p>:</p>
+            </div>
+            <div class="displayseconds">
+              <span id="SecondsTime">00</span>
+            </div>
+            <div class="displayAmPm">
+              <span id="AmPm">AM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

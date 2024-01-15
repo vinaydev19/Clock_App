@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #eeeeee;
+}
+
+header {
+  width: 100%;
+}
+nav,
+.nav {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-logo a {
+  color: #000;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.nav-logo a h1 {
+  /* height: 100%; */
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 30px;
+
+  text-align: center;
+}
+.nav-list-mid ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-right: 30px;
+}
+.nav-list-mid ul li {
+  color: #000;
+  text-decoration: none;
+  margin: 25px 20px 0px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.nav-list-mid ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.nav-list-mid ul li a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+.nav-list-right ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+.nav-list-right ul li {
+  text-decoration: none;
+  margin: 25px 20px 0px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.nav-list-right ul li a {
+  color: #000;
+}
+.nav-list-right ul li a:hover {
+  color: #007bff;
+}
+
+.MenuBarOpen {
+  font-size: 1.2rem;
+  margin: 25px 50px 0px 25px;
+  display: none;
+}
+
+.MobileNav-list {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  top: 0px;
+  transform: translateX(0px);
+  transition: all 5s ease-in;
+  z-index: 10;
+}
+.show_menu {
+  display: block;
+}
+.MobileNav-list ul li {
+  list-style: none;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.MobileNav-list ul li i {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+.MobileNav-list ul li a {
+  color: #000;
+  text-decoration: none;
+}
+.MobileNav-list ul li a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section1 {
+  width: 50%;
+  height: 30%;
+  background-color: #4b4358;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 20px rgb(35, 35, 35);
+  border-radius: 5px;
+}
+.Displaytime {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: row;
+}
+.displayHours,
+.displayminutes,
+.displayseconds {
+  display: flex;
+  flex-direction: row;
+}
+.displayHours span,
+.displayminutes span,
+.displayseconds span {
+  font-size: 100px;
+  margin: 10px;
+  padding: 10px;
+}
+.displayHours p,
+.displayminutes p,
+.displayseconds p {
+  font-size: 80px;
+  color: rgb(32, 30, 30);
+  margin: 10px 5px 5px;
+  padding: 10px 5px 5px;
+}
+
+.displayAmPm span {
+  font-size: 30px;
+}
+
+@media (max-width: 1150px) {
+  .section1 {
+    width: 70%;
+    height: 30%;
+  }
+}
+
+@media (max-width: 970px) {
+  .nav-list-mid,
+  .nav-list-right {
+    display: none;
+  }
+
+  .show_Cart {
+    display: block;
+  }
+  .MenuBarOpen {
+    display: block;
+  }
+  .MobileLift {
+    display: block;
+  }
+  .MenuAddtocart {
+    display: block;
+  }
+  .MenuBarOpen:hover {
+    cursor: pointer;
+  }
+  .MenuBarOpen a {
+    margin: 0px 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .section1 {
+    width: 80%;
+    height: 30%;
+  }
+  .displayHours span,
+  .displayminutes span,
+  .displayseconds span {
+    font-size: 80px;
+  }
+  .displayHours p,
+  .displayminutes p,
+  .displayseconds p {
+    font-size: 60px;
+  }
+  .displayAmPm span {
+    font-size: 25px;
+    position: relative;
+  }
+}
+
+@media (max-width: 630px) {
+  .section1 {
+    width: 90%;
+    height: 25%;
+  }
+  .displayHours span,
+  .displayminutes span,
+  .displayseconds span {
+    font-size: 60px;
+  }
+  .displayHours p,
+  .displayminutes p,
+  .displayseconds p {
+    font-size: 40px;
+  }
+  .displayAmPm span {
+    font-size: 20px;
+    position: relative;
+  }
+}
+@media (max-width:450px) {
+    .section1 {
+        width: 98%;
+        height: 25%;
+      }
+      .displayHours span,
+      .displayminutes span,
+      .displayseconds span {
+        font-size: 45px;
+      }
+      .displayHours p,
+      .displayminutes p,
+      .displayseconds p {
+        font-size: 30px;
+      }
+      .displayAmPm span {
+        font-size: 16px;
+        position: relative;
+      }
+}
