@@ -118,55 +118,69 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Arial, sans-serif;
 }
 
 .section1 {
   width: 50%;
-  height: 30%;
-  background-color: #4b4358;
+  max-height: 80%;
+  background-color: #1b191b;
+  color: #fff;
   display: flex;
   justify-content: center;
-  align-items: center;
-  box-shadow: 0px 0px 20px rgb(35, 35, 35);
-  border-radius: 5px;
+}
+.displayOption {
+  width: 100%;
+  margin: 50px 0px 50px;
+}
+.btn {
+  width: 150px;
+  height: 50px;
+  font-size: 1.2rem;
+  margin: 0px 30px;
+  cursor: pointer;
+  border: none;
+  background-color: #3d3c40;
+  color: #b2acac;
+  border-radius: 20px;
 }
 .Displaytime {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
-  flex-direction: row;
-}
-.displayHours,
-.displayminutes,
-.displayseconds {
-  display: flex;
-  flex-direction: row;
-}
-.displayHours span,
-.displayminutes span,
-.displayseconds span {
+  justify-content: center;
+  margin: 50px 50px;
   font-size: 100px;
-  margin: 10px;
-  padding: 10px;
 }
-.displayHours p,
-.displayminutes p,
-.displayseconds p {
-  font-size: 80px;
-  color: rgb(32, 30, 30);
-  margin: 10px 5px 5px;
-  padding: 10px 5px 5px;
+/* #focusTime,
+#Short_Break_Time,
+#Long_Break_Time {
+  display: flex;
+  justify-content: center;
+  margin: 50px 50px;
+  font-size: 100px;
+} */
+.startORstop {
+  display: flex;
+  justify-content: center;
+  margin: 20px 30px;
+}
+.btn2 {
+  width: 100px;
+  height: 50px;
+  font-size: 1.2rem;
+  margin: 0px 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  margin: 0px 30px 50px;
 }
 
-.displayAmPm span {
-  font-size: 30px;
+.hide {
+  display: none;
 }
 
-@media (max-width: 1150px) {
-  .section1 {
-    width: 70%;
-    height: 30%;
-  }
+.currentClass {
+  background-color: #f4182a;
+  color: #fff;
 }
 
 @media (max-width: 970px) {
@@ -194,67 +208,3 @@ main {
     margin: 0px 30px;
   }
 }
-
-@media (max-width: 800px) {
-  .section1 {
-    width: 80%;
-    height: 30%;
-  }
-  .displayHours span,
-  .displayminutes span,
-  .displayseconds span {
-    font-size: 80px;
-  }
-  .displayHours p,
-  .displayminutes p,
-  .displayseconds p {
-    font-size: 60px;
-  }
-  .displayAmPm span {
-    font-size: 25px;
-    position: relative;
-  }
-}
-
-@media (max-width: 630px) {
-  .section1 {
-    width: 90%;
-    height: 25%;
-  }
-  .displayHours span,
-  .displayminutes span,
-  .displayseconds span {
-    font-size: 60px;
-  }
-  .displayHours p,
-  .displayminutes p,
-  .displayseconds p {
-    font-size: 40px;
-  }
-  .displayAmPm span {
-    font-size: 20px;
-    position: relative;
-  }
-}
-@media (max-width:450px) {
-    .section1 {
-        width: 98%;
-        height: 25%;
-      }
-      .displayHours span,
-      .displayminutes span,
-      .displayseconds span {
-        font-size: 45px;
-      }
-      .displayHours p,
-      .displayminutes p,
-      .displayseconds p {
-        font-size: 30px;
-      }
-      .displayAmPm span {
-        font-size: 16px;
-        position: relative;
-      }
-}
-
-

@@ -29,23 +29,26 @@ setInterval(() => {
   document.getElementById("AmPm").innerText = AmOrPm;
 }, 1000);
 
-// hours
-//   if (hours < 10) {
-//     document.getElementById("HoursTime").innerText = `0${hours}`;
-//   } else {
-//     document.getElementById("HoursTime").innerText = hours;
-//   }
+/*
+hours
+  if (hours < 10) {
+    document.getElementById("HoursTime").innerText = `0${hours}`;
+  } else {
+    document.getElementById("HoursTime").innerText = hours;
+  }
 
-//   // minutes
-//   if (minutes < 10) {
-//     document.getElementById("MinutesTime").innerText = `0${minutes}`;
-//   } else {
-//     document.getElementById("MinutesTime").innerText = minutes;
-//   }
+  // minutes
+  if (minutes < 10) {
+    document.getElementById("MinutesTime").innerText = `0${minutes}`;
+  } else {
+    document.getElementById("MinutesTime").innerText = minutes;
+  }
 
-//   // seconds
-//   if (seconds < 10) {
-//     document.getElementById("SecondsTime").innerText = `0${seconds}`;
-//   } else {
-//     document.getElementById("SecondsTime").innerText = seconds;
-//   }
+  // seconds
+  if (seconds < 10) {
+    document.getElementById("SecondsTime").innerText = `0${seconds}`;
+  } else {
+    document.getElementById("SecondsTime").innerText = seconds;
+  }
+*/
+
