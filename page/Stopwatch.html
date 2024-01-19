@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f8178aea98.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="Stopwatch.css" />
+    <title>Clock App</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav">
+          <div class="nav-logo">
+            <a href="index.html"><h1>Clock App</h1></a>
+          </div>
+          <div class="nav-list-mid">
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="#">World Clock</a></li>
+              <li><a href="#">Alarm Clock</a></li>
+              <li>
+                <a href="/page/Pomodoro.html">Pomodoro Technique Timer</a>
+              </li>
+              <li><a href="/page/Stopwatch.html">StopWatch</a></li>
+            </ul>
+          </div>
+          <div class="MenuBarOpen">
+            <i class="fa-solid fa-bars" id="OpenBtn"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="MobileNav-list" id="Mobilebar">
+        <ul>
+          <li>
+            <a href=""><i class="fa-solid fa-xmark"></i></a>
+          </li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="#">World Clock</a></li>
+          <li><a href="#">Alarm Clock</a></li>
+          <li><a href="#">Pomodoro Technique Timer</a></li>
+          <li><a href="#">StopWatch</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="innerSection">
+          <div class="Displaytime">
+            <div class="displayhours">
+              <span id="HoursTime">00</span>
+            </div>
+            <p>:</p>
+            <div class="displayminutes">
+              <span id="MinutesTime">00</span>
+            </div>
+            <p>:</p>
+            <div class="displayseconds">
+              <span id="SecondsTime">00</span>
+            </div>
+          </div>
+          <div class="startORstop">
+            <button class="btn Start" id="Start">Start</button>
+            <button class="btn pause hide" id="Pause">pause</button>
+            <button class="btn Reset hide" id="Reset">Reset</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script>
+    let secondsCount = 0;
+    let minutesCount = 0;
+    let hoursCount = 0;
+
+    let SecondsTime = document.getElementById("SecondsTime");
+    let MinutesTime = document.getElementById("MinutesTime");
+    let HoursTime = document.getElementById("HoursTime");
+
+    let Startbtn = document.getElementById("Start");
+    let Pausebtn = document.getElementById("Pause");
+    let Resetbtn = document.getElementById("Reset");
+
+    let Displaytime;
+
+    Startbtn.addEventListener("click", () => {
+      Startbtn.classList.add("hide");
+      Pausebtn.classList.remove("hide");
+      Resetbtn.classList.remove("hide");
+
+      Displaytime = setInterval(() => {
+        secondsCount++;
+        if (secondsCount == 60) {
+          secondsCount = 0;
+
+          minutesCount++;
+          if (minutesCount == 60) {
+            minutesCount = 0;
+
+            hoursCount++;
+            if (hoursCount == 99) {
+              hoursCount = 0;
+
+              // clearInterval(Displaytime);
+            }
+          }
+        }
+        SecondsTime.innerHTML =
+          secondsCount >= 10 ? secondsCount : `0${secondsCount}`;
+        MinutesTime.innerHTML =
+          minutesCount >= 10 ? minutesCount : `0${minutesCount}`;
+        HoursTime.innerHTML = hoursCount >= 10 ? hoursCount : `0${hoursCount}`;
+      }, 1000);
+    });
+
+    Pausebtn.addEventListener("click", () => {
+      Startbtn.classList.remove("hide");
+      Pausebtn.classList.add("hide");
+      clearInterval(Displaytime);
+    });
+    Resetbtn.addEventListener("click", () => {
+      clearInterval(Displaytime);
+      secondsCount = 0;
+      minutesCount = 0;
+      hoursCount = 0;
+      SecondsTime.innerHTML = "00";
+      MinutesTime.innerHTML = "00";
+      HoursTime.innerHTML = "00";
+      Startbtn.classList.remove("hide");
+      Pausebtn.classList.add("hide");
+      Resetbtn.classList.add("hide");
+    });
+  </script>
+</html>

@@ -111,17 +111,16 @@ nav,
   text-decoration: underline;
   color: #007bff;
 }
-
 main {
   width: 100vw;
   height: 90vh;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   font-family: Arial, sans-serif;
 }
 
-.section1 {
+.section {
   width: 50%;
   max-height: 80%;
   background-color: #1b191b;
@@ -129,41 +128,19 @@ main {
   display: flex;
   justify-content: center;
 }
-.displayOption {
-  width: 100%;
-  margin: 50px 0px 50px;
-}
-.btn {
-  width: 150px;
-  height: 50px;
-  font-size: 1.2rem;
-  margin: 0px 30px;
-  cursor: pointer;
-  border: none;
-  background-color: #3d3c40;
-  color: #b2acac;
-  border-radius: 20px;
-}
 .Displaytime {
   display: flex;
   justify-content: center;
   margin: 50px 50px;
   font-size: 100px;
 }
-/* #focusTime,
-#Short_Break_Time,
-#Long_Break_Time {
+.startORstop{
   display: flex;
   justify-content: center;
-  margin: 50px 50px;
-  font-size: 100px;
-} */
-.startORstop {
-  display: flex;
-  justify-content: center;
-  margin: 20px 30px;
+  align-items: center;
 }
-.btn2 {
+
+.btn {
   width: 100px;
   height: 50px;
   font-size: 1.2rem;
@@ -176,16 +153,6 @@ main {
 
 .hide {
   display: none;
-}
-
-.currentClass {
-  background-color: #f4182a;
-  color: #fff;
-}
-@media (max-width: 1280px) {
-  .section1 {
-    width: 70%;
-  }
 }
 
 @media (max-width: 970px) {
@@ -211,49 +178,5 @@ main {
   }
   .MenuBarOpen a {
     margin: 0px 30px;
-  }
-  .section1 {
-    width: 80%;
-  }
-  .btn {
-    width: 120px;
-  }
-}
-
-@media (max-width: 700px) {
-  .section1 {
-    width: 90%;
-  }
-  .btn {
-    width: 100px;
-    font-size: 16px;
-    margin: 0px 20px;
-  }
-}
-
-@media (max-width: 500px) {
-  .btn {
-    width: 100px;
-    font-size: 15px;
-    margin: 0px 10px;
-  }
-}
-@media (max-width: 420px) {
-  .section1 {
-    width: 90%;
-    max-height: 90%;
-  }
-  .btn {
-    width: 150px;
-    font-size: 1.2rem;
-    margin: 0px 50px;
-  }
-  .displayOption {
-  width: 100%;
-
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 30px;
-    place-items: center;
   }
 }
