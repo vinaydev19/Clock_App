@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f8178aea98.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="Alarm.css" />
+    <title>Alarm Clock</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav">
+          <div class="nav-logo">
+            <a href="index.html"><h1>Clock App</h1></a>
+          </div>
+          <div class="nav-list-mid">
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="#">World Clock</a></li>
+              <li><a href="#">Alarm Clock</a></li>
+              <li>
+                <a href="/page/Pomodoro.html">Pomodoro Technique Timer</a>
+              </li>
+              <li><a href="/page/Stopwatch.html">StopWatch</a></li>
+            </ul>
+          </div>
+          <div class="MenuBarOpen">
+            <i class="fa-solid fa-bars" id="OpenBtn"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="MobileNav-list" id="Mobilebar">
+        <ul>
+          <li>
+            <a href=""><i class="fa-solid fa-xmark"></i></a>
+          </li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="#">World Clock</a></li>
+          <li><a href="Alarm.html">Alarm Clock</a></li>
+          <li><a href="Pomodoro.html">Pomodoro Technique Timer</a></li>
+          <li><a href="Stopwatch.html">StopWatch</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <h1>Alarm Clock</h1>
+        <div class="displaySetAlarm">
+          <p>Enter Time</p>
+          <input type="time" id="time" />
+          <button id="setAlarm" class="setAlarm">Set Alarm</button>
+        </div>
+        <div class="displaytime">
+          <div id="displaytimeInfo">
+            <i class="fa-regular fa-clock"></i>
+            <p id="displayAlarmTime"></p>
+            <div class="toggle"></div>
+            <i class="fa-solid fa-trash"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script>
+    const setAlarm = document.getElementById("setAlarm");
+    // function getTime() {
+    //   let dt = new Date();
+    //   let hours = dt.getHours().toString()
+    //   let minutes = dt.getMinutes().toString();
+
+    //   console.log("in function", typeof hours);
+    //   console.log("in function", typeof minutes);
+
+    //   return {hours, minutes}
+    // }
+    setAlarm.addEventListener("click", () => {
+      const time = document.getElementById("time").value;
+      let hours = time.split(":")[0];
+      let minutes = time.split(":")[1];
+
+      const displaytime = document.querySelector(".displaytime");
+      displaytime.style.display = "block";
+      document.getElementById(
+        "displayAlarmTime"
+      ).innerHTML = `${hours}:${minutes}`;
+      // console.log(displaytime);
+
+      let dt = new Date();
+      let gethours = dt.getHours().toString();
+      let getminutes = dt.getMinutes().toString();
+
+      if (hours == gethours && minutes == getminutes) {
+        console.log("time is ok");
+      }
+    });
+
+    let toggle = document.querySelector(".toggle");
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+    });
+  </script>
+</html>

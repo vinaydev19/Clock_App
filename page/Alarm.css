@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #eeeeee;
+}
+
+header {
+  width: 100%;
+}
+nav,
+.nav {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-logo a {
+  color: #000;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.nav-logo a h1 {
+  /* height: 100%; */
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 30px;
+
+  text-align: center;
+}
+.nav-list-mid ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-right: 30px;
+}
+.nav-list-mid ul li {
+  color: #000;
+  text-decoration: none;
+  margin: 25px 20px 0px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.nav-list-mid ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.nav-list-mid ul li a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+.nav-list-right ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+.nav-list-right ul li {
+  text-decoration: none;
+  margin: 25px 20px 0px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.nav-list-right ul li a {
+  color: #000;
+}
+.nav-list-right ul li a:hover {
+  color: #007bff;
+}
+
+.MenuBarOpen {
+  font-size: 1.2rem;
+  margin: 25px 50px 0px 25px;
+  display: none;
+}
+
+.MobileNav-list {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  top: 0px;
+  transform: translateX(0px);
+  transition: all 5s ease-in;
+  z-index: 10;
+}
+.show_menu {
+  display: block;
+}
+.MobileNav-list ul li {
+  list-style: none;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.MobileNav-list ul li i {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+.MobileNav-list ul li a {
+  color: #000;
+  text-decoration: none;
+}
+.MobileNav-list ul li a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+main {
+  width: 100vw;
+  /* max-height: 90vh; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+
+.section {
+  width: 50%;
+  max-height: 80%;
+  background-color: #1b191b;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.section h1 {
+  margin: 50px 0px 50px;
+  font-size: 40px;
+}
+.displaySetAlarm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 0px 40px;
+  gap: 30px;
+}
+.displaySetAlarm input {
+  width: 200px;
+  height: 30px;
+  font-size: 18px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+.displaySetAlarm p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.displaySetAlarm .setAlarm {
+  width: 150px;
+  height: 30px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin: 0px 0px 50px;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.displaytime{
+  width: 70%;
+  display: none;
+}
+#displaytimeInfo{
+  width: 100%;
+  color: #fff;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.displaytime i {
+  font-size: 1.7rem;
+}
+.displaytime i:last-child:hover {
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #007bff;
+}
+.displaytime p {
+  font-size: 1.5rem;
+}
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: #302e2c;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.toggle::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  left: 5px;
+  background-color: #d2d2d2;
+  border-radius: 50%;
+  transition: left 0.2s ease-in;
+}
+.toggle.active::before {
+  background-color: #007bff;
+  left: calc(100% - 20px - 5px);
+}
+
+@media (max-width: 970px) {
+  .nav-list-mid,
+  .nav-list-right {
+    display: none;
+  }
+
+  .show_Cart {
+    display: block;
+  }
+  .MenuBarOpen {
+    display: block;
+  }
+  .MobileLift {
+    display: block;
+  }
+  .MenuAddtocart {
+    display: block;
+  }
+  .MenuBarOpen:hover {
+    cursor: pointer;
+  }
+  .MenuBarOpen a {
+    margin: 0px 30px;
+  }
+}
